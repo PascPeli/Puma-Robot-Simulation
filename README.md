@@ -19,10 +19,12 @@ The manipulator simulates the human arm, imitating the left or right side of the
 
 The six joints of the robot are revolute with their limitations are illustrated in Figure 1. The joints are properly positioned to give the arm six degrees of freedom.
 His workplace is roughly made up of a sphere with a radius of 1.25 meters (Figure 2).
+
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure1.png alt="Drawing" style="width: 500px;"/>
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure2.png alt="Drawing" style="width: 500px;"/>
 
 The end-effector of the arm is a Spherical wrist which means that the last three axes intersect at a common point (Figure 3). This is a sufficient condition for a six-rotary operator to have a closed-form solution. We will see the importance of this feature in the next section.
+
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure3.png alt="Drawing" style="width: 500px;"/>
 
 ## Robot Kinematics
@@ -38,6 +40,7 @@ The Inverse Kinematic Problem is defined as follows:
 Given the position and direction of the robots' end-effector, calculate all possible sets of joint variables (angles or displacements) with which the end-effector could reach the given position.
 
 An illustration of the two kinematic problems is given in Figure 4
+
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure4.png alt="Drawing" style="width: 500px;"/>
 
 The most common method used for solving the kinematics problems is that of Denavit & Hartenberg (1955) which uses homogeneous 4x4 orthogonal transforms.
@@ -56,10 +59,12 @@ These four parameters are as follows:
 ### Solving the Forward Kinematics Problem
 
 To solve the direct kinematic problem using the Denavit & Hartenberg method we first need to place the axes on the joints of the arm, making sure that the rules mentioned above are observed. This ends up with the axes as shown in Figure 5.
+
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure5.png alt="Drawing" style="width: 500px;"/>
 
 
 The Denavit-Hartenberg parameters of PUMA 762 are shown in Table 3.
+
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Table1.png alt="Drawing" style="width: 500px;"/>
 
 
@@ -87,25 +92,18 @@ The solution of the inverse kinematic problem is mainly done by 2 methods, <b>nu
 #### Kinematic Decoupling
 
 Solving the Inverse Problem can be simplified for arms with 6 degrees of freedom, with the last 3 links intersecting at the same point. In these cases it is possible to use kinematic decoupling, dividing the original problem into two simpler problems. These two sub-problems are called Inverse Position Kinematics and Inverse Orientation Kinematic. The first one calculates the position of the intersection of the wrist axes and the second the orientation of the wrist. This separation simplifies the calculations.
-A basic requirement for the application of kinematic decoupling is that the wrist of the arm is spherical, that is to say, its three axes intersect at the same point. The arrangement of the spherical wrist whose axes z<sub>3</sub>, z<sub>4</sub>, z<sub>5</sub> intersect at a common point is shown in Figure 6.
-<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure12.png alt="Drawing" style="width: 500px;"/>
+A basic requirement for the application of kinematic decoupling is that the wrist of the arm is spherical, that is to say, its three axes intersect at the same point. The arrangement of the spherical wrist whose axes z<sub>3</sub>, z<sub>4</sub>, z<sub>5</sub> intersect at a common point is shown in Figure 7.
+<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure7.png alt="Drawing" style="width: 500px;"/>
 
-For a Puma arm, there are four possible solutions for the first three joints. Each of these solutions has two possible solutions for the last three links, as shown in Figures 7 and 8.
+For a Puma arm, there are four possible solutions for the first three joints. Each of these solutions has two possible solutions for the last three links, as shown in Figures 8 and 9.
 In order to be able to choose the desired of these solutions, we introduce some indicators depending on the setup of the arm, which are translated into signs (+ or -) for the equations. These indicators are determined according to the arrangement of the members (hands) of the human body, and in particular, the position of the shoulder, the elbow and the wrist, and are as follows.
 
 &emsp;&emsp;Shoulder Right: +1 &emsp;&emsp; |&emsp;&emsp;  Elbow over wrist : +1  &emsp;&emsp;|&emsp;&emsp;  Wrist down: +1
 
 &emsp;&emsp;&emsp;Shoulder Left: -1  &emsp;&emsp;|&emsp;&emsp; Elbow under wrist: -1 &emsp;&emsp; |&emsp;&emsp;  Wrist up  : -1
 
-
-
-
-
-
-
-
-<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure7.png alt="Drawing" style="width: 500px;"/>
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure8.png alt="Drawing" style="width: 500px;"/>
+<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure9.png alt="Drawing" style="width: 500px;"/>
 
 ## The Graphical User Interface. Additions, Changes, Improvements
 
@@ -117,7 +115,7 @@ Several changes were made to the original code, increasing its functionality. Th
 
 A breakdown of the changes and additions is given below.
 
-<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure9 alt="Drawing" style="width: 500px;"/>
+<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure10 alt="Drawing" style="width: 500px;"/>
 
 #### Inverse Kinematics Solver
 
