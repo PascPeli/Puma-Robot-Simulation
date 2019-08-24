@@ -95,7 +95,7 @@ In order to be able to choose the desired of these solutions, we introduce some 
 
 &emsp;&emsp;Shoulder Right: +1 &emsp;&emsp; |&emsp;&emsp;  Elbow over wrist : +1  &emsp;&emsp;|&emsp;&emsp;  Wrist down: +1
 
-&emsp;&emsp;Shoulder Left : -1  &emsp;&emsp;|&emsp;&emsp; Elbow under wrist: -1 &emsp;&emsp; |&emsp;&emsp;  Wrist up  : -1
+&emsp;&emsp;&emsp;Shoulder Left : -1  &emsp;&emsp;|&emsp;&emsp; Elbow under wrist: -1 &emsp;&emsp; |&emsp;&emsp;  Wrist up  : -1
 
 
 
