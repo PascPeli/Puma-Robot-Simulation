@@ -67,11 +67,12 @@ The Denavit-Hartenberg parameters of PUMA 762 are shown in Table 3.
 
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Table1.png alt="Drawing" style="width: 500px;"/>
 
-
+ 
 The next step requires the creation of the individual homogeneous transformations. The transformation matrices are given by the equeation (1)
 i-1iT = Rx (αi-1) * Dx (ai-1) * Rz (θi) * Qi (di). 
 Where R<sub>x</sub>, R<sub>z</sub> denote the rotation around the x and z axes respectively, while D<sub>x</sub> and Q denote the translation along the x and z axes respectively. The operation is as follows:
 
+<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Table2.png alt="Drawing" style="width: 500px;"/>
 
 Having calculated the matrices <sup>0</sup><sub>1</sub>T, <sup>1</sup><sub>2</sub>T, <sup>2</sup><sub>3</sub>T, <sup>3</sup><sub>4</sub>T, <sup>4</sup><sub>5</sub>T, <sup>5</sup><sub>6</sub>T we can find the position and direction of any joint of the robot relative to the reference frame (usually the robot's base) but also to any other frame by multiplying the matrices from the reference frame to the requested link.
 The position of the end-effector of the arm relative to the reference frame is given by the table 
@@ -152,9 +153,9 @@ In this project, we managed to create a graphical interface that allows the user
 - Craig, J. J. (1985). Introduction to Robotics, Mechanics and Control. 3rd Ed. 
 - Cubero, S. (2007). Industrial Robotics: Theory, Modelling and Control. 
 - Dolinsky, J.-U. (2001). The Development of a Genetic Programming Method for Kinematic Robot Calibration.
-- Robot Manipulators. Position, Orientation and Coordinate Transformations. (n.d.). Ανάκτηση από www.maplesoft.com.
-Spong, M. W., & Vidyasagar, M. (1989). Robot Dynamics and Control 2nd Ed. 
+- Robot Manipulators. Position, Orientation and Coordinate Transformations. (n.d.).
+- Spong, M. W., & Vidyasagar, M. (1989). Robot Dynamics and Control 2nd Ed. 
 - Unimation. (1986). PUMA_761_762_Equipment_Manual.
-Ziegler, C. s. (1983). Geometric Approach in Solving Inverse Kinematics of PUMA Robots. 
+- Ziegler, C. s. (1983). Geometric Approach in Solving Inverse Kinematics of PUMA Robots. 
 - Emiris, D. (2004). Ρομποτική. 
 - Boutalis, Ι. (2014). Διαλέξεις Ρομποτικής.
