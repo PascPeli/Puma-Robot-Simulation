@@ -93,17 +93,16 @@ A basic requirement for the application of kinematic decoupling is that the wris
 For a Puma arm, there are four possible solutions for the first three joints. Each of these solutions has two possible solutions for the last three links, as shown in Figures 7 and 8.
 In order to be able to choose the desired of these solutions, we introduce some indicators depending on the setup of the arm, which are translated into signs (+ or -) for the equations. These indicators are determined according to the arrangement of the members (hands) of the human body, and in particular, the position of the shoulder, the elbow and the wrist, and are as follows.
 
-Shoulder Right: +1
+Shoulder Right: +1  |  Elbow over wrist : +1  |  Wrist down: +1
 
-Shoulder Left: -1
+Shoulder Left : -1  |  Elbow under wrist: -1  |  Wrist up  : -1
 
-Elbow over wrist: +1
 
-Elbow under wrist : -1
 
-Wrist down: +1
 
-Wrist up: -1
+
+
+
 
 <img src=raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure7.png alt="Drawing" style="width: 500px;"/>
 <img src=raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure8.png alt="Drawing" style="width: 500px;"/>
