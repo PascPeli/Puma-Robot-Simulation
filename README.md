@@ -29,7 +29,7 @@ The end-effector of the arm is a Spherical wrist which means that the last three
 
 ## Robot Kinematics
 
-The kinematic problem in robots is divided into two separate problems. The Forward Kinematic Problem and the Inverse Kinematic Problem.
+The kinematics problem in robots is divided into two separate problems. The Forward Kinematic Problem and the Inverse Kinematic Problem.
 
 The Forward Kinematic Problem is defined as follows:
 
@@ -39,7 +39,7 @@ The Inverse Kinematic Problem is defined as follows:
 
 Given the position and direction of the robots' end-effector, calculate all possible sets of joint variables (angles or displacements) with which the end-effector could reach the given position.
 
-An illustration of the two kinematic problems is given in Figure 4
+An illustration of the two kinematics problems is given in Figure 4
 
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure4.png alt="Drawing" style="width: 500px;"/>
 
@@ -58,7 +58,7 @@ These four parameters are as follows:
 
 ### Solving the Forward Kinematics Problem
 
-To solve the direct kinematic problem using the Denavit & Hartenberg method we first need to place the axes on the joints of the arm, making sure that the rules mentioned above are observed. This ends up with the axes as shown in Figure 5.
+To solve the direct kinematics problem using the Denavit & Hartenberg method we first need to place the axes on the joints of the arm, making sure that the rules mentioned above are observed. This ends up with the axes as shown in Figure 5.
 
 <img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure5.png alt="Drawing" style="width: 500px;"/>
 
@@ -88,7 +88,7 @@ The elements of the 2nd column <b>s</b> are the products of the normalized orien
 
 While the Forward kinematics problem always has a unique solution, the Inverse Kinematics problem is more difficult to solve as it may have one or more solutions or none at all. The reason for this is the nonlinearity of the problem. A prerequisite for the existence of a solution is for the desired location has to be within the robot's workplace.
 
-The solution of the inverse kinematic problem is mainly done by 2 methods, <b>numerical</b> and <b>analytical</b> (closed form) which is in turn divided into 2 sub-approaches, <b>geometric</b> and <b>algebraic</b>. In this work we used the geometric approach. This choice was made because this approach gives clear indications of which is the optimal solution for each layout of the robot, as opposed to the algebraic approach that usually requires experience by the operator and involves more calculations. The closed-form solution allows us to develop rules for choosing one particular solution among many.
+The solution of the inverse kinematics problem is mainly done by 2 methods, <b>numerical</b> and <b>analytical</b> (closed form) which is in turn divided into 2 sub-approaches, <b>geometric</b> and <b>algebraic</b>. In this work we used the geometric approach. This choice was made because this approach gives clear indications of which is the optimal solution for each layout of the robot, as opposed to the algebraic approach that usually requires experience by the operator and involves more calculations. The closed-form solution allows us to develop rules for choosing one particular solution among many.
 
 #### Kinematic Decoupling
 
@@ -129,7 +129,7 @@ Below the input fields, there are radio buttons where the user can choose which 
 ####  Display Denavit-Hartenberg parameters and final <sup>0</sup><sub>6</sub>T transform matrix
 Another important addition is the ability to display the Denavit-Hartenberg parameter and especially the final <sup>0</sup><sub>6</sub>T transform matrix. Although their role is auxiliary, they give an educational tone and complement the graphical environment.
 
-The Denavit-Hartenberg parameter table displays the parameters of each link of the robot. In the Transformation matrix table, we can see all the values of the homogeneous 06T transformation. Many times these values can be used to verify and correlate the solutions of the two kinematic problems, but not always as the inverse solution is not always unique.
+The Denavit-Hartenberg parameter table displays the parameters of each link of the robot. In the Transformation matrix table, we can see all the values of the homogeneous 06T transformation. Many times these values can be used to verify and correlate the solutions of the two kinematics problems, but not always as the inverse solution is not always unique.
 
 A button (DH&T matrix) was implemented in the graphical interface to show or hide these two tables.
 
