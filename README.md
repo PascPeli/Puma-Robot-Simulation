@@ -116,7 +116,7 @@ Several changes were made to the original code, increasing its functionality. Th
 
 A breakdown of the changes and additions is given below.
 
-<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure10 alt="Drawing" style="width: 500px;"/>
+<img src=https://raw.githubusercontent.com/PascPeli/Puma-Robot-Simulation/master/data/presentation/images/Figure10.png alt="Drawing" style="width: 500px;"/>
 
 #### Inverse Kinematics Solver
 
